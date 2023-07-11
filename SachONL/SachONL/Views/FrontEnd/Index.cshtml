@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SachONL.Models.SACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BookStoreLayoutPage.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <p>Sách mới</p>
+    <div class="sach">
+        <p class="tensach"><a href="chitietsanpham.html">@item.TenSach</a></p>
+        <img class="hinhsach" src="~/Content/bookimages/Sach/@item.HinhMinhHoa" />
+        <p class="dongia"> Đơn giá: <span class="gia">@item.DonGia VND</span></p>
+        <a href="#"><img class="nutchonmua" src="~/Content/bookimages/Chonmua.png" />  </a>
+    </div>
+
+    /*<tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonViTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhMinhHoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLanXem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHUDE.TenChuDe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NHAXUATBAN.TenNXB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaSach }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaSach })
+        </td>
+    </tr>*/
+}
+

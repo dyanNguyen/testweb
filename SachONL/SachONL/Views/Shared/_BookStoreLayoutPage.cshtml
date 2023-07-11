@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Styte.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+
+        <div id="logo">
+            <img src="~/Content/bookimages/LOGO.jpg" />
+        </div>
+        <div id="dn">
+            <img src="~/Content/bookimages/dangnhap.jpg" /><a href="Dangnhap.html">Đăng nhập</a><b>|	</b><a href="dangki.html">Đăng Ký</a>    <img src="~/Content/bookimages/xehang.gif" width="26" height="16" /><a href="giohang.html">Giỏ Hàng</a>
+        </div>
+    </header>
+
+    <nav>
+        <div id="subnav">
+            <ul>
+                <li><a href="TRANGCHU.html" target="_blank">TRANG CHỦ</a></li>
+                <li><a href="gioiThieu.html" target="_blank">GIỚI THIỆU</a></li>
+                <li><a href="lienhe.html" target="_blank">LIÊN HỆ</a></li>
+            </ul>
+
+            <div>
+                <input type="text" size="60" placeholder="Hãy nhập tên sách cần tìm..." />
+                <input type="submit" value="Tìm sách" />
+            </div>
+        </div>
+    </nav>
+
+    <div id="body">
+        <img src="~/Content/bookimages/Slider.jpg"
+        <article>
+            <aside id="left">
+                <div>
+                    <p>SÁCH THEO CHỦ ĐỀ</p>
+                    @Html.Action("subject","FrontEnd");
+                </div>
+                <div>
+                    <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+                    <ul>
+                        <li><u><a href="#">Nhà xuất bản trẻ</a></u></li>
+                        <li><u><a href="#">NXB Thống kê</a></u></li>
+                        <li><u><a href="#">Kim Đồng</a></u></li>
+                        <li><u><a href="#">Đại học quốc gia</a></u></li>
+                        <li><u><a href="#">Văn hóa nghệ thuật</a></u></li>
+                        <li><u><a href="#">Văn hóa</a></u></li>
+                        <li><u><a href="#">Lao động - Xã hôi</a></u></li>
+                        <li><u><a href="#">Khoa học & Kỹ thuật</a></u></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section>
+                @RenderBody()
+            </section>
+
+            <aside id="right">
+                <div id="sachbannhieu">
+                    <p>SÁCH BÁN NHIỀU</p>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onmousemove="stop()" onmouseout="start()">
+                        <div id="ten">
+                            <p><a href="#"><img src="~/Content/bookimages/Sach/KT0009.jpg" />Thủ Thuật Lập Trình Visual Basic 6</a></p>
+                            <p><a href="#"><img src="~/Content/bookimages/Sach/TH005.jpg" />Hướng Dẫn Tự Học Photoshop CS (Photoshop 6.0)</a></p>
+                            <p><a href="#"><img src="~/Content/bookimages/Sach/TH002.jpg" />Căn Bản Về Photoshop CS Tinh Chỉnh Và Xử Lý Màu</a></p>
+                            <p><a href="#"><img src="~/Content/bookimages/Sach/THCB.jpg" />Tin Học Cơ Bản</a></p>
+                        </div>
+                    </marquee>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <div id="lienketwebsite">
+                    <p>LIÊN KẾT WEBSITE</p>
+                    <select onchange="window.open(this.options[selectedIndex].value,'_blank')">
+                        <option selected="selected">--- Chọn Trang Liên Kết ---</option>
+                        <option value="https://www.tdmu.edu.vn/">ĐH Thủ Dầu Một</option>
+                        <option value="https://et.tdmu.edu.vn/">Viện KT-CN</option>
+                    </select>
+                </div>
+                <div id="thongketruycap">
+                    <p>THỐNG KÊ TRUY CẬP</p>
+                    <p>Tổng truy cập:160</p>
+                    <P>Đang online:3</P>
+                </div>
+            </aside>
+        </article>
+
+        <footer>
+            <p>©2016 - Nhà sách ABC. Allright Reserved</p>
+            <p>Website được phát triển để sử dụng làm bài tập thực hành môn Thiết kế và Lập trình Web</p>
+            <p>Email: abc.thudaumotuniversity@gmail.com</p>
+        </footer>
+    </div>
+</body>
+</html>

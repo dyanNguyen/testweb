@@ -1,0 +1,10 @@
+﻿@model IEnumerable<SachONL.Models.CHUDE>
+
+<ul style="square">
+    @foreach (var item in Model)
+            {
+                <li>
+                    <i><a href="/~FrontEnd/BookSubject/?id=@item.MaCD ">@item.TenChuDe</a></i>
+                </li>
+            }
+</ul>
